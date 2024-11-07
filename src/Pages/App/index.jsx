@@ -1,4 +1,5 @@
 import React from 'react';
+import { ShoppingCartProvider } from '../../Context';
 import { useRoutes, BrowserRouter } from 'react-router-dom';
 import { Home } from "../Home";
 import { MyAccount } from "../MyAccount";
@@ -13,6 +14,7 @@ import { Furnitures } from "../Furnitures";
 import { Toys } from "../Toys";
 import { Other } from "../Other";
 import { Navbar } from '../../Components/Navbar';
+import { CheckoutSideMenu } from '../../Components/CheckoutSideMenu';
 import './App.css';
 
 const AppRouters = () => {
@@ -37,10 +39,13 @@ const AppRouters = () => {
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <AppRouters />
-    </BrowserRouter>
+    <ShoppingCartProvider>
+      <BrowserRouter>
+        <Navbar />
+        <CheckoutSideMenu />
+        <AppRouters />
+      </BrowserRouter>
+    </ShoppingCartProvider>
   )
 }
 
