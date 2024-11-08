@@ -24,9 +24,9 @@ const Card = (data) => {
     if (isInCard) {
       return (
         <div 
-          className='absolute top-0 right-0 flex justify-center items-center bg-black w-6 h-6 rounded-full m-2 p-1'
+          className='absolute top-0 right-0 flex justify-center items-center bg-green-400 w-6 h-6 rounded-full m-2 p-1'
           onClick={(event) => addProductsToCard(event, data.data)}>
-          <CheckIcon className="size-6 text-white"></CheckIcon>  
+          <CheckIcon className="size-7 text-white"></CheckIcon>  
         </div>
       )
     } else {
